@@ -9,7 +9,7 @@ const FooterComponent = () => {
         <Typography color="blue-gray" className="font-normal">
           &copy; 2024 Smart Learn
         </Typography>
-        <ul className="flex flex-wrap items-center gap-y-2 gap-x-8 hidden lg:disply-block">
+        <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
           <li>
             <Typography
               as="a"
