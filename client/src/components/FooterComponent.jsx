@@ -5,7 +5,7 @@ import { Typography } from "@material-tailwind/react";
 const FooterComponent = () => {
   return (
     <>
-      <footer className="flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-t border-blue-gray-50 py-6 text-center md:justify-between">
+      <footer className="flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-t border-blue-gray-50 py-6 relative z-20 text-center md:justify-between">
         <Typography color="blue-gray" className="font-normal">
           &copy; 2024 Smart Learn
         </Typography>
@@ -15,7 +15,7 @@ const FooterComponent = () => {
               as="a"
               href="#"
               color="blue-gray"
-              className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
+              className="font-normal transition-colors hover:text-blue-50 focus:text-blue-500"
             >
               About Us
             </Typography>

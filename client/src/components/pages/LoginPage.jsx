@@ -96,7 +96,7 @@ const LoginPage = () => {
             <BottomGradient />
           </button>
           <span>
-              Don't Have An Account? <span onClick={MoveToRegister} className='cursor-pointer'> Sign In </span>
+              Don't Have An Account? <span onClick={MoveToRegister} className='cursor-pointer'> Sign Up </span>
           </span>
         </div>
       </form>
