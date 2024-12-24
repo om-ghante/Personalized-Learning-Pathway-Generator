@@ -1,7 +1,14 @@
 import React from 'react'
 import { Button } from '@material-tailwind/react'
+import { useNavigate } from 'react-router-dom'
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const MoveToLogin = () => {
+    navigate('/login');
+  }
+
   return (
     (<>
       <div className="h-[44rem] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
@@ -21,9 +28,15 @@ const HomePage = () => {
             type="text"
             placeholder="hi@smartlearn.in"
             className="rounded-lg border border-black p-2 lg:p-3 focus:ring-2 focus:ring-teal-500  w-full relative z-10 mt-4  bg-neutral-950 placeholder:text-black" />
-          <Button className='m-5'>
-            Get Started
-          </Button>
+            <Button 
+              fullWidth 
+              variant="gradient" 
+              size="sm" 
+              onClick={MoveToLogin} 
+              className="mt-5 h-10 relative z-20"
+            >
+              <span>Get started</span>
+            </Button>
         </div>
       </div>
     </>)

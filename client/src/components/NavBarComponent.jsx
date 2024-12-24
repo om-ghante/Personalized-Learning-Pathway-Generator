@@ -10,11 +10,11 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import FooterComponent from './FooterComponent';
 import HomePage from './pages/HomePage';
 
-
+import { useNavigate } from 'react-router-dom';
 import { BackgroundBeams } from "./ui/background-beams";
 
 const NavBarComponent = () => {
-
+    const navigate = useNavigate();
     const [openNav, setOpenNav] = React.useState(false);
  
     React.useEffect(() => {
@@ -24,6 +24,9 @@ const NavBarComponent = () => {
       );
     }, []);
    
+    const MoveToLogin = () => {
+      navigate('/login');
+    }
     const navList = (
       <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
         <Typography
@@ -78,6 +81,7 @@ const NavBarComponent = () => {
                         variant="gradient"
                         size="sm"
                         className="hidden lg:inline-block"
+                        onClick={MoveToLogin}
                     >
                         <span>Get started</span>
                     </Button>
@@ -95,7 +99,7 @@ const NavBarComponent = () => {
                 </div>
                 <Collapse open={openNav}>
                     {navList}
-                    <Button fullWidth variant="gradient" size="sm" className="">
+                    <Button fullWidth variant="gradient" size="sm" onClick={MoveToLogin}>
                         <span>Get started</span>
                     </Button>
                 </Collapse>
