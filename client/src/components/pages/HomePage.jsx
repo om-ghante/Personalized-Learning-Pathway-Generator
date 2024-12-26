@@ -1,14 +1,7 @@
 import React from 'react'
 import { Button } from '@material-tailwind/react'
-import { useNavigate } from 'react-router-dom'
 
 const HomePage = () => {
-  const navigate = useNavigate();
-
-  const MoveToLogin = () => {
-    navigate('/login');
-  }
-
   return (
     (<>
       <div className="h-[44rem] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
@@ -32,7 +25,6 @@ const HomePage = () => {
               fullWidth 
               variant="gradient" 
               size="sm" 
-              onClick={MoveToLogin} 
               className="mt-5 h-10 relative z-20"
             >
               <span>Get started</span>
